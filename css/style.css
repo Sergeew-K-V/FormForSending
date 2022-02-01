@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -84,4 +85,15 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: 400;
+}
+
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(87%, #3fc8c4), to(#00d4ff));
+  background: linear-gradient(90deg, #020024 0%, #3fc8c4 87%, #00d4ff 100%);
+  color: white;
+  font-family: 'Playfair Display', serif;
 }

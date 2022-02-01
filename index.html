@@ -7,6 +7,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Form</title>
    </head>
+
+   <!-- https://www.youtube.com/watch?v=PqTrhfjLQBI -->
+
    <body>
       <div class="wrapper">
          <div class="form">
@@ -21,7 +24,7 @@
                <input type="text" id="formEmail" name="name" class="form__input" />
             </div>
             <div class="form__item">
-               <div class="form__title">Укажи пол:</div>
+               <div class="form__label">Укажи пол:</div>
                <div class="options">
                   <div class="options__item">
                      <input
@@ -51,14 +54,50 @@
                <textarea name="message" id="formMessage" class="form__input"></textarea>
             </div>
             <div class="form__item">
-               <div class="form__title">Возраст:</div>
+               <div class="form__label">Возраст:</div>
                <select name="age" class="select">
-                  <option value="18-25"></option>
-                  <option value="25-45"></option>
-                  <option value="45+"></option>
+                  <option value="18-25">Молодой</option>
+                  <option value="25-45">Средних лет</option>
+                  <option value="45+">Чуть выше средних лет</option>
                </select>
             </div>
+            <div class="form__item">
+               <div class="form__label">Прикрепить фото</div>
+               <div class="file">
+                  <div class="file__item">
+                     <input
+                        id="formImage"
+                        type="file"
+                        accept=".jpg, .png, .gif"
+                        name="image"
+                        class="file__input"
+                     />
+                     <div class="file__button">Выбрать</div>
+                  </div>
+                  <div class="file__preview"></div>
+               </div>
+            </div>
+            <div class="form__item">
+               <div class="checkbox">
+                  <input
+                     type="checkbox"
+                     name="agreement"
+                     id="formAgreement"
+                     class="checkbox__input"
+                     checked
+                  />
+                  <label for="formAgreement" class="checkbox__label"
+                     ><span
+                        >Я даю свое согласие на обработку персональных данных в соответствии с<a
+                           >Условиями*</a
+                        ></span
+                     ></label
+                  >
+               </div>
+            </div>
+            <button class="form__button" type="submit">Отправить</button>
          </div>
       </div>
+      <script src="/scripts/app.js"></script>
    </body>
 </html>
