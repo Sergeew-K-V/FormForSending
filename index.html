@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <link rel="stylesheet" href="/css/style.css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Form</title>
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="form">
+            <form action="#" id="form" class="form__body"></form>
+            <h1 class="form__title">Заполните форму</h1>
+            <div class="form__item">
+               <label for="formName" class="form__label">Имя:*</label>
+               <input type="text" id="formName" name="name" class="form__input" />
+            </div>
+            <div class="form__item">
+               <label for="formEmail" class="form__label">E-mail:*</label>
+               <input type="text" id="formEmail" name="name" class="form__input" />
+            </div>
+            <div class="form__item">
+               <div class="form__title">Укажи пол:</div>
+               <div class="options">
+                  <div class="options__item">
+                     <input
+                        type="radio"
+                        id="formGenderMale"
+                        name="gender"
+                        class="options__input"
+                        value="male"
+                        checked
+                     />
+                     <label for="formGender" class="options__label">Мужской</label>
+                  </div>
+                  <div class="options__item">
+                     <input
+                        type="radio"
+                        id="formGenderFemale"
+                        name="gender"
+                        class="options__input"
+                        value="female"
+                     />
+                     <label for="formGenderFemale" class="options__label">Женский</label>
+                  </div>
+               </div>
+            </div>
+            <div class="form__item">
+               <label for="formMessage" class="form__label">Сообщение:</label>
+               <textarea name="message" id="formMessage" class="form__input"></textarea>
+            </div>
+            <div class="form__item">
+               <div class="form__title">Возраст:</div>
+               <select name="age" class="select">
+                  <option value="18-25"></option>
+                  <option value="25-45"></option>
+                  <option value="45+"></option>
+               </select>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
