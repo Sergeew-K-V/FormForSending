@@ -1,106 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <link rel="stylesheet" href="/css/style.css" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Form</title>
-   </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
 
-   <body>
-      <div class="wrapper">
-         <div class="form">
-            <form action="#" id="form" class="form__body">
-               <h1 class="form__title">Заполните форму</h1>
-               <div class="form__item">
-                  <label for="formName" class="form__label">Имя:*</label>
-                  <input type="text" id="formName" name="name" class="form__input" />
-               </div>
-               <div class="form__item">
-                  <label for="formEmail" class="form__label">E-mail:*</label>
-                  <input type="text" id="formEmail" name="name" class="form__input" />
-               </div>
-               <div class="form__item">
-                  <div class="form__label">Укажи пол:</div>
-                  <div class="options">
-                     <div class="options__item">
-                        <input
-                           type="radio"
-                           id="formGenderMale"
-                           name="gender"
-                           class="options__input"
-                           checked
-                           value="male"
-                        />
-                        <label for="formGenderMale" class="options__label"
-                           ><span>Мужской</span></label
-                        >
-                     </div>
-                     <div class="options__item">
-                        <input
-                           type="radio"
-                           id="formGenderFemale"
-                           name="gender"
-                           class="options__input"
-                           value="female"
-                        />
-                        <label for="formGenderFemale" class="options__label"
-                           ><span>Женский</span></label
-                        >
-                     </div>
-                  </div>
-               </div>
-               <div class="form__item">
-                  <label for="formMessage" class="form__label">Сообщение:</label>
-                  <textarea name="message" id="formMessage" class="form__input"></textarea>
-               </div>
-               <div class="form__item">
-                  <div class="form__label">Возраст:</div>
-                  <select name="age" class="select">
-                     <option value="18-25">Молодой</option>
-                     <option value="25-45">Средних лет</option>
-                     <option value="45+">Чуть выше средних лет</option>
-                  </select>
-               </div>
-               <div class="form__item">
-                  <div class="form__label">Прикрепить фото</div>
-                  <div class="file">
-                     <div class="file__item">
-                        <input
-                           id="formImage"
-                           type="file"
-                           accept=".jpg, .png, .gif"
-                           name="image"
-                           class="file__input"
-                        />
-                        <div class="file__button">Выбрать</div>
-                     </div>
-                     <div class="file__preview"></div>
-                  </div>
-               </div>
-               <div class="form__item">
-                  <div class="checkbox">
-                     <input
-                        type="checkbox"
-                        name="agreement"
-                        id="formAgreement"
-                        class="checkbox__input"
-                        checked
-                     />
-                     <label for="formAgreement" class="checkbox__label"
-                        ><span
-                           >Я даю свое согласие на обработку персональных данных в соответствии с<a
-                              >Условиями*</a
-                           ></span
-                        ></label
-                     >
-                  </div>
-               </div>
-               <button class="form__button" type="submit">Отправить</button>
-            </form>
-         </div>
+  <body>
+    <div class="wrapper">
+      <div class="form">
+        <form action="#" id="form" class="form__body">
+          <h1 class="form__title">Заполните форму</h1>
+          <div class="form__item">
+            <label for="formName" class="form__label">Имя:*</label>
+            <input type="text" id="formName" name="name" class="form__input" />
+          </div>
+          <div class="form__item">
+            <label for="formEmail" class="form__label">E-mail:*</label>
+            <input type="text" id="formEmail" name="name" class="form__input" />
+          </div>
+          <div class="form__item">
+            <div class="form__label">Укажи пол:</div>
+            <div class="options">
+              <div class="options__item">
+                <input
+                  type="radio"
+                  id="formGenderMale"
+                  name="gender"
+                  class="options__input"
+                  checked
+                  value="male"
+                />
+                <label for="formGenderMale" class="options__label"
+                  ><span>Мужской</span></label
+                >
+              </div>
+              <div class="options__item">
+                <input
+                  type="radio"
+                  id="formGenderFemale"
+                  name="gender"
+                  class="options__input"
+                  value="female"
+                />
+                <label for="formGenderFemale" class="options__label"
+                  ><span>Женский</span></label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="form__item">
+            <label for="formMessage" class="form__label">Сообщение:</label>
+            <textarea
+              name="message"
+              id="formMessage"
+              class="form__input"
+            ></textarea>
+          </div>
+          <div class="form__item">
+            <div class="form__label">Возраст:</div>
+            <select name="age" class="select">
+              <option value="18-25">Молодой</option>
+              <option value="25-45">Средних лет</option>
+              <option value="45+">Чуть выше средних лет</option>
+            </select>
+          </div>
+          <div class="form__item">
+            <div class="form__label">Прикрепить фото</div>
+            <div class="file">
+              <div class="file__item">
+                <input
+                  id="formImage"
+                  type="file"
+                  accept=".jpg, .png, .gif"
+                  name="image"
+                  class="file__input"
+                />
+                <div class="file__button">Выбрать</div>
+              </div>
+              <div class="file__preview"></div>
+            </div>
+          </div>
+          <div class="form__item">
+            <div class="checkbox">
+              <input
+                type="checkbox"
+                name="agreement"
+                id="formAgreement"
+                class="checkbox__input"
+                checked
+              />
+              <label for="formAgreement" class="checkbox__label"
+                ><span
+                  >Я даю свое согласие на обработку персональных данных в
+                  соответствии с <a>Условиями*</a></span
+                ></label
+              >
+            </div>
+          </div>
+          <button class="form__button" type="submit">Отправить</button>
+        </form>
       </div>
-      <script src="/scripts/app.js"></script>
-   </body>
+    </div>
+    <script src="/scripts/app.js"></script>
+  </body>
 </html>
