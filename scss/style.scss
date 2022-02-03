@@ -42,6 +42,13 @@ body {
     border-radius: 10px;
     padding: 0 20px;
   }
+  &__input:focus {
+    box-shadow: 0 0 15px rgb(255, 251, 0);
+  }
+
+  &__input._error {
+    box-shadow: 0 0 15px rgb(255, 6, 6);
+  }
 
   textarea.form__input {
     padding: 20px;
@@ -50,6 +57,22 @@ body {
   }
 
   &__button {
+    position: relative;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    border: 1.5px solid black;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0 5px 0 rgb(28, 13, 43);
     background: rgb(132, 63, 200);
     background: linear-gradient(
       90deg,
@@ -57,6 +80,19 @@ body {
       rgba(47, 132, 149, 1) 100%,
       rgba(2, 0, 36, 1) 100%
     );
+  }
+  &__button:hover {
+    background: rgb(136, 9, 248);
+    // background: linear-gradient(
+    //   90deg,
+    //   rgb(82, 37, 129) 0%,
+    //   rgb(13, 90, 107) 100%,
+    //   rgba(2, 0, 36, 1) 100%
+    // );
+  }
+  &__button:active {
+    top: 3px;
+    box-shadow: 0 1px 0 rgb(28, 13, 43);
   }
 }
 .options {
@@ -124,7 +160,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 20%;
+    width: 23%;
     height: 100%;
     opacity: 0;
     font-size: 0;
@@ -156,10 +192,51 @@ body {
     max-width: 100%;
   }
 }
+.checkbox._error .checkbox__label::before {
+  box-shadow: 0 0 15px rgb(255, 0, 0);
+}
 .checkbox {
   &__input {
+    cursor: pointer;
+    display: none;
   }
 
   &__label {
+    position: relative;
+    line-height: 1.4;
+    display: inline-flex;
+  }
+  &__label a {
+    color: yellow;
+  }
+
+  &__label::before {
+    flex: 0 0 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 4px;
+    content: '';
+    margin-right: 10px;
+  }
+  &__label::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 4px;
+    left: 4px;
+    background: rgb(0, 0, 0);
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 232, 237, 1) 51%,
+      rgba(18, 87, 88, 1) 100%
+    );
+    border-radius: 4px;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+  }
+  &__input:checked + .checkbox__label::after {
+    transform: scale(1);
   }
 }

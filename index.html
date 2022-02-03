@@ -15,11 +15,11 @@
           <h1 class="form__title">Заполните форму</h1>
           <div class="form__item">
             <label for="formName" class="form__label">Имя:*</label>
-            <input type="text" id="formName" name="name" class="form__input" />
+            <input type="text" id="formName" name="name" class="form__input _req" />
           </div>
           <div class="form__item">
             <label for="formEmail" class="form__label">E-mail:*</label>
-            <input type="text" id="formEmail" name="name" class="form__input" />
+            <input type="text" id="formEmail" name="name" class="form__input _req _email" />
           </div>
           <div class="form__item">
             <div class="form__label">Укажи пол:</div>
@@ -33,9 +33,7 @@
                   checked
                   value="male"
                 />
-                <label for="formGenderMale" class="options__label"
-                  ><span>Мужской</span></label
-                >
+                <label for="formGenderMale" class="options__label"><span>Мужской</span></label>
               </div>
               <div class="options__item">
                 <input
@@ -45,19 +43,13 @@
                   class="options__input"
                   value="female"
                 />
-                <label for="formGenderFemale" class="options__label"
-                  ><span>Женский</span></label
-                >
+                <label for="formGenderFemale" class="options__label"><span>Женский</span></label>
               </div>
             </div>
           </div>
           <div class="form__item">
             <label for="formMessage" class="form__label">Сообщение:</label>
-            <textarea
-              name="message"
-              id="formMessage"
-              class="form__input"
-            ></textarea>
+            <textarea name="message" id="formMessage" class="form__input"></textarea>
           </div>
           <div class="form__item">
             <div class="form__label">Возраст:</div>
@@ -89,13 +81,13 @@
                 type="checkbox"
                 name="agreement"
                 id="formAgreement"
-                class="checkbox__input"
+                class="checkbox__input _req"
                 checked
               />
               <label for="formAgreement" class="checkbox__label"
                 ><span
-                  >Я даю свое согласие на обработку персональных данных в
-                  соответствии с <a>Условиями*</a></span
+                  >Я даю свое согласие на обработку персональных данных в соответствии с
+                  <a>Условиями*</a></span
                 ></label
               >
             </div>

@@ -7,3 +7,54 @@
 
 //    Здравствуйте, я начинающий frontend developer, и хотел бы попасть на стажировку по вакансии "Стажер- Frontend разработчик". Очень хочу набраться опыта и улучшить свои знания, работая за реальными проектами. В 2021 году получил красный диплом бакалавра по специальности "Программная инженерия". Также сам учился и проходил курсы в интернете по frontend, делал проекты и выкладывал результаты на gitHub. Ссылка на gitHub в резюме.
 // Вот ссылка на мое резюме:https://drive.google.com/file/d/1tV-jo-2W6nw5ea2DFEE5YLdg37tWnWKv/view
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('form')
+  form.addEventListener('submit', formSend)
+
+  function formSend(e) {
+    e.preventDefault()
+
+    let error = formValidate(form)
+  }
+
+  function formValidate(form) {
+    let error = 0
+    let formReq = document.querySelectorAll('._req')
+    console.log(formReq)
+    for (let i = 0; i < formReq.length; i++) {
+      const input = formReq[i]
+      formRemoveError(input)
+
+      if (input.classList.contains('_email')) {
+        if (validateEmail(input) || input.value === '') {
+          formAddError(input)
+          error++
+        }
+      } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
+        formAddError(input)
+        error++
+      } else {
+        if (input.value === '') {
+          formAddError(input)
+          error++
+        }
+      }
+    }
+  }
+
+  function formAddError(input) {
+    input.parentElement.classList.add('_error')
+    input.classList.add('_error')
+  }
+  function formRemoveError(input) {
+    input.parentElement.classList.remove('_error')
+    input.classList.remove('_error')
+  }
+
+  function validateEmail(input) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+      String(input).toLowerCase()
+    )
+  }
+})
