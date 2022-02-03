@@ -16,6 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault()
 
     let error = formValidate(form)
+    if (error === 0) {
+      alert('И тут уже в ход идет php, которого я не знаю (должна быть отправка формы на email)')
+    } else {
+      alert('Заполните обязательные поля!')
+    }
   }
 
   function formValidate(form) {
@@ -56,5 +61,25 @@ document.addEventListener('DOMContentLoaded', () => {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
       String(input).toLowerCase()
     )
+  }
+
+  const formImage = document.getElementById('formImage')
+
+  const formPreview = document.getElementById('formPreview')
+
+  formImage.addEventListener('change', () => {
+    uploadFile(formImage.files[0])
+  })
+
+  function uploadFile(file) {
+    if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
+      alert('Разрешены только изображения.')
+      formImage.value = ''
+      return
+    }
+    if (file.size > 2 * 1024 * 1024) {
+      alert('Файл должен быть менее 2 Мб')
+      return
+    }
   }
 })
