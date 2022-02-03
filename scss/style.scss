@@ -1,4 +1,4 @@
-@import 'nullstyle.scss';
+@import '/nullstyle.scss';
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 body {
   height: 100%;
@@ -83,12 +83,6 @@ body {
   }
   &__button:hover {
     background: rgb(136, 9, 248);
-    // background: linear-gradient(
-    //   90deg,
-    //   rgb(82, 37, 129) 0%,
-    //   rgb(13, 90, 107) 100%,
-    //   rgba(2, 0, 36, 1) 100%
-    // );
   }
   &__button:active {
     top: 3px;
