@@ -81,5 +81,14 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Файл должен быть менее 2 Мб')
       return
     }
+
+    var reader = new FileReader()
+    reader.onload = function (e) {
+      formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`
+    }
+    reader.onerror = function (e) {
+      alert('Error')
+    }
+    reader.readAsDataURL(file)
   }
 })
