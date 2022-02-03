@@ -347,3 +347,13 @@ body {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
+
+@media (max-width: 757px) {
+  .form {
+    margin: 0 auto;
+    padding: 30px 20px 30px;
+  }
+  .form__title {
+    font-size: 30px;
+  }
+}
