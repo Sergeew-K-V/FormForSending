@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <title>Grid</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title"><h1>Welcome to Project with Grid</h1></div>
+      <div class="main">
+        <form class="form-input">
+          <div class="form-input__grid">
+            <input
+              id="input-first-name"
+              type="text"
+              class="form-input__input"
+              placeholder="First name"
+            />
+            <input
+              id="input-age"
+              type="text"
+              class="form-input__input"
+              placeholder="Age"
+            />
+            <input
+              id="input-message"
+              type="text"
+              class="form-input__input"
+              placeholder="Message"
+            />
+            <button id="btn-save" class="form-input__btn">Save</button>
+            <button id="btn-download" class="form-input__btn">Download</button>
+          </div>
+        </form>
+        <div class="grid-big">
+          <div class="grid-big__small"></div>
+          <div class="grid-big__small"></div>
+          <div class="grid-big__small"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/scripts/"></script>
+  </body>
+</html>
+
+
+
+
+
+
+.form-input {
+  border: 1px solid red;
+  margin: 20px auto;
+  padding: 5px;
+  &__btn {
+  }
+  &__grid {
+  }
+  &__input {
+  }
+}
+.grid-big {
+  margin: 20px auto;
+  padding: 5px;
+  display: grid;
+  border: 1px solid black;
+  &__small {
+    margin: 10px;
+    border: 1px solid green;
+    min-height: 25px;
+  }
+}
+body {
+  font-size: 16px;
+}
+.main {
+}
+.title {
+  font-size: 20px;
+  text-align: center;
+}
+.wrapper {
+}
